@@ -35,6 +35,14 @@ class UserSeeder extends Seeder
                 'role'              => 'superadmin'
             ],
             [
+                'name'              => 'سعید شریف',
+                'mobile'            => '09156890019',
+                'email'             => 'sharif0@borjix.ir',
+                'email_verified_at' => now(),
+                'password'          => bcrypt('123456'),
+                'role'              => 'admin'
+            ],
+            [
                 'name'              => 'کاربر دمو',
                 'mobile'            => '09123456789',
                 'email'             => null,
