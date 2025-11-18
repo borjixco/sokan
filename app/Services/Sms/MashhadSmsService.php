@@ -12,7 +12,8 @@ class MashhadSmsService implements SmsServiceInterface
     public function __construct(public $apiKey = null)
     {
         $smsSetting = Setting::get('admin.sms');
-        $token = $smsSetting['mashhadSms']['token'];
+        //$token = $smsSetting['mashhadSms']['token'];
+        $token = '';
         $this->apiKey = $token;
         $this->endpoint = 'https://api2.ippanel.com/api/v1';
     }
