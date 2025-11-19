@@ -76,7 +76,7 @@ export default {
 }
 
 .rb-sidebar-section .q-drawer .rb-logo img {
-    width: 175px;
+    width: 100px;
 }
 
 .rb-sidebar-section .q-drawer hr {
