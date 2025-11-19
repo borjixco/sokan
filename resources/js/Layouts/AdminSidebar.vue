@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import logoImage from '/resources/img/logo.svg';
+import logoImage from '/resources/img/logo.png';
 import {usePage, router, Link} from '@inertiajs/vue3';
 import {route} from "ziggy-js";
 import {formHandler} from "@/utils/helpers.js";

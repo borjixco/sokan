@@ -60,7 +60,7 @@
     </div>
 </template>
 <script>
-import logoImage from '/resources/img/logo.svg';
+import logoImage from '/resources/img/logo.png';
 import {ref} from 'vue'
 import {formHandler} from '@/utils/helpers';
 import {Head, usePage} from "@inertiajs/vue3";

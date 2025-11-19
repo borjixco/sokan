@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import logoImage from '/resources/img/logo.svg';
+import logoImage from '/resources/img/logo.png';
 import {ref, computed, onMounted, watch, reactive, nextTick} from 'vue';
 import { formHandler } from '@/utils/helpers';
 import { Head } from "@inertiajs/vue3";
