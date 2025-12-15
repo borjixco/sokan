@@ -32,34 +32,19 @@ return Application::configure(basePath: dirname(__DIR__))
                     ->group(base_path('routes/web.php'));
             }
             else{
-                if ($isDemo) {
-                    Route::middleware('web')
-                        ->as('admin.')
-                        ->domain($demoName.'.'.$domain.'/admin')
-                        ->prefix('admin')
-                        ->group(base_path('routes/web/admin.php'));
-                    Route::middleware('web')
-                        ->as('client.')
-                        ->domain($demoName.'.'.$domain.'/app')
-                        ->prefix('app')
-                        ->group(base_path('routes/web/client.php'));
-                    Route::middleware('web')
-                        ->domain($demoName.'.'.$domain)
-                        ->group(base_path('routes/web.php'));
-                }
-                else{
-                    Route::middleware('web')
-                        ->as('admin.')
-                        ->domain('admin.'.$domain)
-                        ->group(base_path('routes/web/admin.php'));
-                    Route::middleware('web')
-                        ->as('client.')
-                        ->domain('app.'.$domain)
-                        ->group(base_path('routes/web/client.php'));
-                    Route::middleware('web')
-                        ->domain('web.'.$domain)
-                        ->group(base_path('routes/web.php'));
-                }
+                Route::middleware('web')
+                    ->as('admin.')
+                    ->domain('toucan.borjix.ir/admin')
+                    ->prefix('admin')
+                    ->group(base_path('routes/web/admin.php'));
+                Route::middleware('web')
+                    ->as('client.')
+                    ->domain('toucan.borjix.ir/app')
+                    ->prefix('app')
+                    ->group(base_path('routes/web/client.php'));
+                Route::middleware('web')
+                    ->domain('toucan.borjix.ir')
+                    ->group(base_path('routes/web.php'));
             }
         },
         commands: __DIR__.'/../routes/console.php',
