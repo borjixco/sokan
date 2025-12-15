@@ -40,7 +40,7 @@ return Application::configure(basePath: dirname(__DIR__))
                         ->group(base_path('routes/web/admin.php'));
                     Route::middleware('web')
                         ->as('client.')
-                        ->domain($demoName.'.'.$domain.'/admin')
+                        ->domain($demoName.'.'.$domain.'/app')
                         ->prefix('app')
                         ->group(base_path('routes/web/client.php'));
                     Route::middleware('web')
