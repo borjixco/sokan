@@ -16,7 +16,6 @@ return Application::configure(basePath: dirname(__DIR__))
             $isLocal = env('APP_ENV') === 'local';
             $domain = env('DOMAIN_ADDRESS');
             $demoName = env('APP_NAME','demo');
-
             if($isLocal){
                 Route::middleware('web')
                     ->as('admin.')
@@ -36,16 +35,16 @@ return Application::configure(basePath: dirname(__DIR__))
                 if ($isDemo) {
                     Route::middleware('web')
                         ->as('admin.')
-                        ->domain($demoName.'.'.$domain)
+                        ->domain($demoName.'.'.$domain.'/admin')
                         ->prefix('admin')
                         ->group(base_path('routes/web/admin.php'));
                     Route::middleware('web')
                         ->as('client.')
-                        ->domain($demoName.'.'.$domain)
+                        ->domain($demoName.'.'.$domain.'/admin')
                         ->prefix('app')
                         ->group(base_path('routes/web/client.php'));
                     Route::middleware('web')
-                        ->domain('web.'.$domain)
+                        ->domain($demoName.'.'.$domain)
                         ->group(base_path('routes/web.php'));
                 }
                 else{
